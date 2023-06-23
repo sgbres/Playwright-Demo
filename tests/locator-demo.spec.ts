@@ -16,20 +16,12 @@ test.describe('Demo Test Suite', () => {
 
   test.only('Locator Test with steps', async ({ page }) => {
     const largePage = new LargePage(page);
-
-    await test.step('Open large page', async () => {
-      await largePage.gotoLargePage();
-    });
-
+ 
     // steps to goto Large page and assert elements with specified text are present
-    await test.step('Validate the siblings contain 25.3', async () => {
-      await expect(largePage.siblingsElements).toContainText("25.3");
-      await expect(largePage.singleSibling).toBeVisible();
-    });
-
-    await test.step('Validate the siblings contain 25.3', async () => {
-      await expect(largePage.tableElements).toContainText("25.25");
-    });
+    await largePage.gotoLargePage();
+    await expect(largePage.siblingsElements).toContainText("25.3");
+    await expect(largePage.singleSibling).toBeVisible();
+    await expect(largePage.tableElements).toContainText("25.25");
   });
 
   test('Dynamic Elements Test - Add/Remove', async ({ page }) => {
