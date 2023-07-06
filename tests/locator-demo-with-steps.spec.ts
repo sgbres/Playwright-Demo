@@ -6,7 +6,7 @@ import { JQueryMenuPage } from '../page_objects/JQueryMenuPage';
 var downloadPath;
 
 test.describe('Demo Test Suite With Test Steps', () => {
-  test('TC_01_Locator Test with steps', async ({ page }) => {
+  test('TC_01_Dynamic Elements Test - Siblings/Table with steps', async ({ page }) => {
     const largePage = new LargePage(page);
 
     await test.step('Open large page', async () => {
@@ -23,7 +23,7 @@ test.describe('Demo Test Suite With Test Steps', () => {
     });
   });
 
-  test('TC_02_Dynamic Elements Test - Add/Remove', async ({ page }) => {
+  test('TC_02_Dynamic Elements Test - Add/Remove with steps', async ({ page }) => {
     const dynamicControlsPage = new DynamicControlsPage(page);
 
     await test.step('Open dynamic controls page and click "Remove" button',async () => {
@@ -46,7 +46,7 @@ test.describe('Demo Test Suite With Test Steps', () => {
     });
   });
 
-  test('TC_03_Dynamic Elements Test - Enable/Disable', async ({ page }) => {
+  test('TC_03_Dynamic Elements Test - Enable/Disable with steps', async ({ page }) => {
     const dynamicControlsPage = new DynamicControlsPage(page);
 
     await test.step('Open dynamic controls page and click "Enable" button',async () => {
@@ -68,7 +68,7 @@ test.describe('Demo Test Suite With Test Steps', () => {
     
   });
 
-  test('TC_04_Custom Menu Test', async ({ page }) => {
+  test('TC_04_Custom Menu Test with steps', async ({ page }) => {
     const jqueryMenuPage = new JQueryMenuPage(page);
 
 

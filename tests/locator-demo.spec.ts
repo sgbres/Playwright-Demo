@@ -4,7 +4,7 @@ import { DynamicControlsPage } from '../page_objects/DynamicControlsPage';
 import { JQueryMenuPage } from '../page_objects/JQueryMenuPage';
 
 test.describe('Demo Test Suite', () => {
-  test.only('Locator Test', async ({ page }) => {
+  test('Locator Test', async ({ page }) => {
     const largePage = new LargePage(page);
 
     // steps to goto Large page and assert elements with specified text are present
@@ -14,7 +14,7 @@ test.describe('Demo Test Suite', () => {
     await expect(largePage.tableElements).toContainText("25.25");
   });
 
-  test.only('Locator Test with steps', async ({ page }) => {
+  test('Dynamic Elements Test - Siblings/Table', async ({ page }) => {
     const largePage = new LargePage(page);
  
     // steps to goto Large page and assert elements with specified text are present
